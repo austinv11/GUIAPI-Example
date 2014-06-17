@@ -3,6 +3,7 @@ package io.github.austinv11.EX1;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.austinv11.GUIAPI.GUIAPI;
 import io.github.austinv11.GUIAPI.Menu;
 import io.github.austinv11.GUIAPI.MenuInteractEvent;
 
@@ -42,9 +43,13 @@ public class EX1 extends JavaPlugin implements Listener{
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
     	//Code for command "/opengui":
 		if (cmd.getName().equalsIgnoreCase("opengui")){
+			//Debug message if /toggletestmode is true
+			GUIAPI.debugMessage(sender, sender.getName());
+			//Debug message if /toggletestmode is true
+			GUIAPI.debugMessage("Initiating Menu now");
     		Player player = (Player) sender;
     		//Creating a new Menu object:
-    		Menu exampleMenu = new Menu(player, ChatColor.GOLD+"Select an Item", 9, this);
+    		Menu exampleMenu = new Menu(player, ChatColor.GOLD+"Select an Item", 9);
     		//Creating a description string list:
     		List<String> description = new ArrayList<String>();
     		description.add("Cost: "+ChatColor.AQUA+"Free");
