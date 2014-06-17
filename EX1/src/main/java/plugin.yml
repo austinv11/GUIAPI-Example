@@ -1,0 +1,20 @@
+name: EX1
+version: 1.0.0
+description: An example for my GUIAPI
+author: austinv11
+website: austinv11.github.io
+depend: [GUIAPI]
+ 
+main: io.github.austinv11.EX1.EX1
+commands:
+   opengui:
+      description: Opens the example gui
+      usage: /<command>
+      permission: EX1.opengui
+      permission-message: You don't have permission
+
+permissions:
+   EX1.*:
+        description: Gives access to all GUIAPI permissions
+   EX1.opengui:
+      description: Opens the example gui
