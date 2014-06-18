@@ -44,9 +44,9 @@ public class EX1 extends JavaPlugin implements Listener{
     	//Code for command "/opengui":
 		if (cmd.getName().equalsIgnoreCase("opengui")){
 			//Debug message if /toggletestmode is true
-			GUIAPI.debugMessage(sender, sender.getName());
+			GUIAPI.debugMessage(sender, ChatColor.YELLOW+sender.getName());
 			//Debug message if /toggletestmode is true
-			GUIAPI.debugMessage("Initiating Menu now");
+			GUIAPI.debugMessage(ChatColor.LIGHT_PURPLE+"Initiating Menu now");
     		Player player = (Player) sender;
     		//Creating a new Menu object:
     		Menu exampleMenu = new Menu(player, ChatColor.GOLD+"Select an Item", 9);
@@ -59,11 +59,11 @@ public class EX1 extends JavaPlugin implements Listener{
     		List<String> description2 = new ArrayList<String>();
     		description2.add("Click to toggle");
     		//Adding a button with a specific slot in mind (slot 9 in this case):
-    		exampleMenu.setButton(8, Material.REDSTONE_LAMP_OFF, ChatColor.RED+"Off", description2);
+    		exampleMenu.setButton(8, Material.REDSTONE, ChatColor.RED+"Off", description2);
     		//Allowing the button to toggle like a T-Flip-Flop (its either on or off):
     		exampleMenu.setButtonToggle(8, true);
     		//Setting what the button will change into when clicked:
-    		exampleMenu.setButtonToggleItem(8, Material.REDSTONE_LAMP_ON, ChatColor.GREEN+"On", description2);
+    		exampleMenu.setButtonToggleItem(8, Material.SLIME_BALL, ChatColor.GREEN+"On", description2);
     		//Opening the menu for the player:
     		exampleMenu.openMenu();
     		return true;
